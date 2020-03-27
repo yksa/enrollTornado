@@ -1,0 +1,12 @@
+<h1>Form</h1>
+
+<label for="name">Name:</label>
+<Input @type="text" id="name" @value={{name}} placeholder="Enter your name"/> <br><br>
+<label for="bDate">Date of Birth:</label>
+<Input @type="text" id="bDate" @value={{bDate}} placeholder="Enter your date of birth" /> <br> <br>
+<label for="address">Address:</label>
+<Input @type="text" id="address" @value={{address}} placeholder="Enter your address" /> <br> <br>
+<label for="phone">Phone No:</label>
+<Input @type="text" id="phone" @value={{phone}} placeholder="Enter your phone no" /> <br> <br>
+<button {{on "click" saveInfo}}>Submit</button>
+<LinkTo @route="list">List</LinkTo>

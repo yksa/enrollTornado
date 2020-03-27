@@ -1,0 +1,31 @@
+<h2>List</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Action</th>
+    </tr>
+    {{#each @model.student as |student|}}
+    <tr>
+        <td>{{student.name}}</td>
+        <td>{{student.bDate}}</td>
+        <td>{{student.address}}</td>
+        <td>{{student.phone}}</td>
+        <td>
+          <LinkTo @route="edit" @model={{student}}>Edit</LinkTo>
+          <button {{on "click" (fn delete student) }}>Delete</button>
+          </td>
+    </tr>
+    {{/each}}
+
+    {{!-- {{#each @model.photos as |photo|}}
+  <p>
+    <LinkTo @route="photo" @model={{photo.id}}>
+      <img src="{{photo.thumbnailUrl}}" alt="{{photo.title}}" />
+    </LinkTo>
+  </p>
+{{/each}} --}}
+</table>

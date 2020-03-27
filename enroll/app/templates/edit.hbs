@@ -1,0 +1,10 @@
+<h1>Edit Form</h1>
+<label for="name">Name:</label>
+<Input @type="text" id="name" @value={{model.name}}/> <br><br>
+<label for="bDate">Date of Birth:</label>
+<Input @type="text" id="bDate" @value={{model.bDate}} /> <br> <br>
+<label for="address">Address:</label>
+<Input @type="text" id="address" @value={{model.address}} /> <br> <br>
+<label for="phone">Phone No:</label>
+<Input @type="text" id="phone" @value={{model.phone}} /> <br> <br> 
+<button {{on "click" (fn this.updateInfo model)}}>Submit</button>
